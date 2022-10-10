@@ -1,0 +1,56 @@
+{% load static %}
+<!-- footer start -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+        <div class="footer__box col-lg-4 col-sm-6">
+            <p class="footer__subtitle">Yangliklarimizga obuna bo’ling</p>
+            <p class="footer__txt">
+            There are many variations of passages of Lorem Ipsum available
+            </p>
+            <form action="">
+            <div class="footer__form">
+                <input type="text" placeholder="Elektron pochta" />
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            </form>
+        </div>
+        <div class="footer__box col-lg-3 col-sm-6">
+            <div class="footer__address">
+            <i class="footer__icon fas fa-map-marker-alt"></i>
+            <p class="footer__text">Mirobod tumani, Oybek ko’chasi</p>
+            </div>
+            <div class="footer__contact">
+            <i class="footer__icon far fa-phone-alt"></i>
+            <a href="tel:+998 71 220-21-22" class="footer__text"
+                >+998 71 220-21-22</a
+            >
+            </div>
+            <div class="footer__mail">
+            <i class="footer__icon far fa-envelope"></i>
+            <a href="mailto:boxfederation.uz" class="footer__text"
+                >boxfederation.uz</a
+            >
+            </div>
+        </div>
+        <div class="footer__box col-lg-3 col-sm-6">
+            <ul class="footer__list">
+            <li class="footer__item footer__text">
+                <a href="{% url 'about' %}" class="footer__text footer__link">Biz haqimizda</a>
+            </li>
+            <li class="footer__item footer__text">
+                <a href="{% url 'team' %}" class="footer__text footer__link">Jamoa</a>
+            </li>
+            <li class="footer__item footer__text">
+                <a href="{% url 'schools' %}" class="footer__text footer__link">Maktablar</a>
+            </li>
+            <li class="footer__item footer__text">
+                <a href="{% url 'blog' %}" class="footer__text footer__link">Blogs</a>
+            </li>
+            </ul>
+        </div>
+        </div>
+        <p class="copywrite">Uzbekistan Boxing Federation. 2022</p>
+    </div>
+</footer>
+<!-- footer end -->

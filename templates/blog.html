@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Box Federation | Home {% endblock%}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+<!-- main css -->
+<link rel="stylesheet" href="{% static 'css/blog__posts.css' %}" />
+{% endblock %}
+{% block content %}
+    <!-- header start -->
+    <header class="header">
+      {% include "nav.html" %}
+
+      <div class="header__content">
+        <div class="container">
+          <div class="header__content--box">
+            <span class="header__page"
+              >Home >
+              <span class="header__current--page">Blog Posts</span></span
+            >
+            <h1 class="header__title" data-aos="fade-up">Blog posts</h1>
+            <p class="header___txt" data-aos="fade-up">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected.
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <main class="main">
+      <!-- news start-->
+      <section class="news">
+        <div class="container">
+          <div class="row">
+            {% for i in blogs %}
+              <div class="blog_box">
+                <a href="{% url 'blog_details' slug=i.slug %}">
+                  <div class="news__img--box">
+                    <img src="/{{ i.blog_image }}" alt="" class="news__img" width="400" height="400"/>
+                    <div class="news__img--info">
+                      <div class="news__date">
+                        <i class="far fa-calendar"></i>
+                        {{ i.date_created }}
+                      </div>
+                      <div class="news__subtitle">
+                        {% if request.LANGUAGE_CODE == "uz" %}
+                        {{ i.title_uz }}
+                      {% elif request.LANGUAGE_CODE == "ru" %}
+                        {{ i.title_ru }}
+                      {% else %}
+                        {{ i.title_en }}
+                      {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+      <!-- news end-->
+    </main>
+{% endblock %}

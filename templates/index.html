@@ -1,0 +1,246 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% block title %}Box Federation | Home {% endblock%}
+{% block link %}
+  <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+{% endblock %}
+{% block content %}
+
+  <!-- header start -->
+  <header class="header">
+    {% include "nav.html" %}
+    <div class="header__content">
+      <div class="container">
+        <div class="header__content--box">
+          <h1 class="header__title" data-aos="fade-up">
+            Tashkent Boxing Federation
+          </h1>
+          <p class="header___txt" data-aos="fade-up">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Blanditiis labore ullam delectus veniam placeat, quod repellendus,
+            quos ducimus repellat perspiciatis cupiditate alias, eveniet animi
+            vel dolorum? Amet animi facilis odit.
+          </p>
+          <button type="button" class="header__btn hvr-shutter-in-horizontal">
+            <a href="{% url 'contact' %}">Batafsil</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <main class="main">
+    <!-- about start-->
+    <section class="about">
+      <div class="container">
+        <div class="about__title--box title--box">
+          <h3 class="title">Biz haqimizda</h3>
+          <p class="txt">
+            There are many variations of passages of Lorem Ipsum available,
+            but the majority have suffered alteration in some form, by
+            injected.
+          </p>
+        </div>
+        <div class="media__content">
+          {% comment %} <video
+            class="about__video"
+            src="https://youtu.be/R64DfNlv4Bs"
+            poster="{% static "img/about__video--cover.png" %}"
+          ></video> {% endcomment %}
+          <iframe width="420" height="315"
+          src="https://www.youtube.com/embed/R64DfNlv4Bs?controls=0">
+          </iframe>
+          {% comment %} <div class="hvr-shutter-in-horizontal about__image">
+            <img src="{% static 'img/play.png' %}" alt="" />
+          </div> {% endcomment %}
+        </div>
+        <button
+          type="button"
+          class="about__btn header__btn hvr-shutter-in-horizontal"
+          data-aos="fade-up"
+          data-aos-duration="1600"
+          data-aos-delay="2200"
+        >
+          <a href="{% url 'about' %}">Batafsil</a>
+        </button>
+      </div>
+    </section>
+    <!-- about end-->
+
+    <!-- reeferes start-->
+    <section class="reeferes">
+      <div class="container">
+        <div class="title--box">
+          <h3 class="title">Murabbiylar</h3>
+          <p class="txt">
+            There are many variations of passages of Lorem Ipsum available,
+            but the majority have suffered alteration in some form, by
+            injected.
+          </p>
+        </div>
+        <div class="row">
+          {% for i in members %}
+            <div class="col-lg-3 col-md-4">
+              <div class="reeferes__info--box">
+                <div class="reeferes__img">
+                  <img src="/{{ i.image }}" alt="" />
+                </div>
+                <div class="reeferes__info">
+                  <p class="reeferes__name">{{ i.fullname }}</p>
+                  <p class="reeferes__desc">{{ i.position }}</p>
+                  <p class="reeferes__desc"><a href="tel:{{ i.number }}">{{ i.number }}</a></p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <button
+          type="button"
+          class="reeferes__btn header__btn hvr-shutter-in-horizontal"
+          data-aos="fade-up"
+          data-aos-duration="1600"
+          data-aos-delay="2200"
+        >
+          <a href="{% url 'team' %}">Barcha murabbiylar</a>
+        </button>
+      </div>
+    </section>
+    <!-- reeferes end-->
+
+    <!-- news start-->
+    <section class="news">
+      <div class="container">
+        <div class="title--box">
+          <h3 class="title">So’nggi yangiliklar</h3>
+          <p class="txt">
+            There are many variations of passages of Lorem Ipsum available,
+            but the majority have suffered alteration in some form, by
+            injected.
+          </p>
+        </div>
+        <div class="row">
+          {% for i in blogs %}
+            <div class="blog_box">
+              <a href="{% url 'blog_details' slug=i.slug %}">
+                <div class="news__img--box">
+                  <img src="/{{ i.blog_image }}" alt="" class="news__img" width="400" height="400"/>
+                  <div class="news__img--info">
+                    <div class="news__date">
+                      <i class="far fa-calendar"></i>
+                      {{ i.date_created }}
+                    </div>
+                    <div class="news__subtitle">
+                      {% if request.LANGUAGE_CODE == "uz" %}
+                        {{ i.title_uz }}
+                      {% elif request.LANGUAGE_CODE == "ru" %}
+                        {{ i.title_ru }}
+                      {% else %}
+                        {{ i.title_en }}
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          {% endfor %}
+  
+
+        </div>
+        <button
+          type="button"
+          class="about__btn header__btn hvr-shutter-in-horizontal"
+          data-aos="fade-up"
+          data-aos-duration="1600"
+          data-aos-delay="2200"
+        >
+          <a href="{% url 'blog' %}">Barcha yangiliklar</a>
+        </button>
+      </div>
+    </section>
+    <!-- news end-->
+
+    <!-- news start-->
+    <section class="schools">
+      <div class="container">
+        <div class="title--box">
+          <h3 class="title">A’zo maktablar</h3>
+          <p class="txt">
+            There are many variations of passages of Lorem Ipsum available,
+            but the majority have suffered alteration in some form, by
+            injected.
+          </p>
+        </div>
+        <div class="row">
+          {% for school in schools %}
+            <div class="col-lg-3 col-md-6">
+              <div class="schools__box">
+                <div class="schools__img">
+                  <img
+                    class="schools__img--self"
+                    src="/{{ school.image }}"
+                    alt=""
+                  />
+                  <div class="schools__star">
+                    <i class="star__icon fas fa-star"></i>
+                    <p class="schools__start--count">{{ school.rating }}</p>
+                  </div>
+                </div>
+                <div class="schools__content">
+                  <p class="schools__title">
+                    {{ school.title }}
+                  </p>
+                  <div class="schools__contact">
+                    <i class="schools__phone fal fa-phone-alt"></i>
+                    <a href="tel:{{ school.number }}">{{ school.number }}</a>
+                  </div>
+                  <div>
+                    <i class="schools__mail far fa-envelope"></i>
+                    <a href="mailto:someone@yoursite.com">{{ school.email }}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <button
+          type="button"
+          class="about__btn header__btn hvr-shutter-in-horizontal"
+          data-aos="fade-up"
+          data-aos-duration="1600"
+          data-aos-delay="2200"
+        >
+          <a href="{% url 'schools' %}">Barcha maktablar</a>
+        </button>
+      </div>
+    </section>
+    <!-- news end-->
+    <!-- partner start-->
+    <section class="partner">
+      <div class="container">
+        <div class="partner__title--box title--box">
+          <h3 class="partner__title title">Bizning hamkorlar</h3>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <img src="{% static '' %}img/partner1.png" alt="" class="partner__img" />
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <img src="{% static '' %}img/partner2.png" alt="" class="partner__img" />
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <img src="{% static '' %}img/partner3.png" alt="" class="partner__img" />
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <img src="{% static '' %}img/partner4.png" alt="" class="partner__img" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- partner end-->
+  </main>
+  
+{% endblock %}
+

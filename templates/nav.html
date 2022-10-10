@@ -1,0 +1,53 @@
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<nav class="navbar header__navbar">
+    <div class="container">
+    <a class="navbar__logo" href="{% url "home" %}"
+        ><img class="logo__img" src="{% static 'img/logo.png' %}" alt=""
+    /></a>
+    <div class="header__burger">
+        <span class="header__icon"></span>
+    </div>
+    <ul class="header__list ml-auto">
+        <li class="nav-item active">
+        <a class="nav__link active" href="{% url 'home' %}">Asosiy Sahifa</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav__link" href="{% url 'about' %}">Biz Haqimizda</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav__link" href="{% url 'team' %}">Murabbiylar</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav__link" href="{% url 'schools' %}">Maktablar</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav__link" href="{% url "blog" %}">Blogs</a>
+        </li>
+        <li class="nav-item">
+            <a class="header__btn" href="{% url 'contact' %}">Contact</a>
+        </li>
+        <li class="nav-item">
+            <form class="hero__lang--form" action="{% url 'change_lang' %}" method="post">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ request.get_full_path}}" />
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                            <button type="submit"
+                                    name="language"
+                                    value="{{ language.code }}"
+                                    class="{% if language.code == LANGUAGE_CODE %}selected{% endif %} hero__lang--self">
+                                {{ language.code }}
+                            </button>
+                    {% endfor %}
+                </ul>
+            </form>
+        </li>
+        
+    </ul>
+    </div>
+</nav>
+

@@ -1,0 +1,36 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}" />
+    <!-- hover -->
+    <link rel="stylesheet" href="{% static 'css/hover-min.css' %}" />
+    <!-- header css -->
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <!-- header css -->
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+    
+    <link rel="stylesheet" href="{% static 'css/lang.css' %}" />
+    {% block link %}{% endblock %}
+
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+</head>
+
+<body>
+    {% block content %}{% endblock %}
+
+    {% include "footer.html" %}
+    <script src="{% static "js/main.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/videoPlay.js" %}"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+.footer {
+  background: #2e2e2e;
+  padding: 50px 0;
+}
+
+.footer .row {
+  justify-content: space-around;
+}
+
+.footer__subtitle {
+  font-size: 18px;
+}
+
+.footer__txt {
+  font-size: 14px;
+  color: #7c7c7c;
+  margin: 10px 0;
+}
+
+.footer__form {
+  border-radius: 10px;
+  background: #464646;
+  padding: 0 0 0 27px;
+  display: flex;
+  align-items: center;
+}
+.footer__form input {
+  background: transparent;
+  border: none;
+  width: 100%;
+  color: #ffffff;
+}
+
+.footer__form input:focus-visible {
+  outline: none;
+}
+i.fas.fa-chevron-right {
+  padding: 15px 20px;
+  background: #4299ea;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.footer__address,
+.footer__contact,
+.footer__mail {
+  display: flex;
+}
+
+.footer__icon {
+  color: #4299ea;
+  margin-right: 10px;
+}
+
+.footer__text {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.copywrite {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #7c7c7c;
+}

@@ -1,0 +1,235 @@
+.about__video {
+  width: 100%;
+}
+.blog_img {
+  Object-fit: cover;
+}
+
+.media__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__image {
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4299ea;
+  cursor: pointer;
+}
+
+.about__image:before {
+  border-radius: 50px;
+}
+
+.reeferes__info--box img {
+  width: 100%;
+}
+
+.reeferes__info {
+  padding: 18px;
+  background-color: #202020;
+  text-align: left;
+  border-radius: 0px 0px 16px 16px;
+}
+
+.reeferes__name {
+  font-size: 22px;
+}
+
+.reeferes__desc {
+  font-size: 16px;
+  font-weight: 400;
+  color: #7c7c7c;
+}
+
+.news__img--box {
+  position: relative;
+  margin: 0 0 30px;
+}
+
+.news__img--info {
+  position: absolute;
+  bottom: 0;
+  text-align: left;
+  padding: 20px;
+}
+.news__img {
+  Object-fit: cover;
+  width: 100%;
+  height: 350px;
+}
+.news__date {
+  color: #cfcfcf;
+}
+
+.news__subtitle {
+  font-size: 16px;
+}
+
+.schools__box {
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.schools__img {
+  position: relative;
+  height: 165px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  overflow: hidden;
+}
+
+.schools__star {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #000000b3;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.schools__start--count,
+.star__icon {
+  font-size: 14px;
+}
+
+.star__icon {
+  margin-right: 10px;
+  color: #ffea31;
+}
+
+.schools__content {
+  background: #202020;
+  padding: 16px;
+  text-align: left;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.schools__title,
+.schools__contact {
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.schools__phone,
+.schools__mail {
+  color: #4299ea;
+}
+.schools__img--self {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.partner__title {
+  margin-bottom: 60px;
+}
+
+/* media start */
+
+@media (max-width: 992px) {
+  section {
+    padding-bottom: 50px;
+  }
+  .header__content--box {
+    width: auto;
+  }
+  .header__title {
+    color: #ffffff;
+    font-size: 40px;
+  }
+
+  .reeferes__name {
+    font-size: 17px;
+  }
+  .reeferes__desc {
+    font-size: 14px;
+  }
+  .reeferes__info--box {
+    margin-bottom: 30px;
+  }
+
+  .reeferes__btn {
+    margin-top: 10px;
+  }
+
+  .news__img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .schools__content {
+    margin-bottom: 30px;
+  }
+
+  .partner__img {
+    margin-bottom: 60px;
+  }
+
+  .footer__box {
+    margin-bottom: 40px;
+  }
+
+  .footer__address,
+  .footer__contact,
+  .footer__mail {
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .copywrite {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  p {
+    font-size: 16px;
+  }
+  .header__navbar.fixed {
+    height: auto;
+  }
+  .header__navbar {
+    padding: 5px 15px;
+  }
+
+  .header__icon {
+    width: 70%;
+  }
+
+  .header__title {
+    font-size: 30px;
+  }
+
+  .header__btn {
+    padding: 7px 12px;
+  }
+
+  .title--box {
+    width: auto;
+  }
+
+  .copywrite {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 414px) {
+  .header__list {
+    width: 100%;
+  }
+}
+
+/* media end */

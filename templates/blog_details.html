@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Box Federation | Home {% endblock%}
+{% block link %}
+  <!-- main css -->
+  <link rel="stylesheet" href="{% static 'css/blog.css' %}" />
+{% endblock %}
+{% block content %}
+  <!-- header start -->
+  <header class="header">
+    {% include 'nav.html' %}
+    <div class="header__content">
+      <div class="container">
+        <div class="header__content--box">
+          <span class="header__page"
+            >Home > <span class="header__current--page">Blog</span></span
+          >
+          <h1 class="header__title" data-aos="fade-up">Blog posts</h1>
+          <p class="header___txt" data-aos="fade-up">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Blanditiis labore ullam delectus veniam placeat, quod repellendus,
+            quos ducimus repellat perspiciatis cupiditate alias, eveniet animi
+            vel dolorum? Amet animi facilis odit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <main class="main" id="main">
+    <!-- blog start -->
+    <section class="blog">
+      <div class="container">
+        <div class="blog__concept">
+          <img src="/{{ blog.blog_image }}" alt="" class="blog__concept--img" />
+          <div class="blog__concept--txt">
+            <p class="desription__concept--subtittle">
+              {% if request.LANGUAGE_CODE == "uz" %}
+                {{ blog.title_uz |safe }}
+              {% elif request.LANGUAGE_CODE == "ru" %}
+                {{ blog.title_ru |safe }}
+              {% else %}
+                {{ blog.title_en |safe }}
+              {% endif %}
+            </p>
+            <p class="blog__concept--txt">
+              {% if request.LANGUAGE_CODE == "uz" %}
+                {{ blog.subtitle_uz |safe }}
+              {% elif request.LANGUAGE_CODE == "ru" %}
+                {{ blog.subtitle_ru |safe }}
+              {% else %}
+                {{ blog.subtitle_en |safe }}
+              {% endif %}
+            </p>
+          </div>
+        </div>
+        <p class="blog__txt">
+          {% if request.LANGUAGE_CODE == "uz" %}
+            {{ blog.body_uz |safe }}
+          {% elif request.LANGUAGE_CODE == "ru" %}
+            {{ blog.body_ru |safe }}
+          {% else %}
+            {{ blog.body_en |safe }}
+          {% endif %}
+        </p>
+      </div>
+    </section>
+    <!-- blog end -->
+  </main>
+{% endblock %}
+

@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Box Federation | Home {% endblock%}
+{% block link %}
+  <link rel="stylesheet" href="{% static 'css/about.css' %}" />  
+{% endblock %}
+{% block content %}
+  <!-- header start -->
+  <header class="header">
+    {% include "nav.html" %}
+
+    <div class="header__content">
+      <div class="container">
+        <div class="header__content--box">
+          <span class="header__page"
+            >Bosh Sahifa >
+            <span class="header__current--page">Biz haqimizda</span></span
+          >
+          <h1 class="header__title" data-aos="fade-up">Biz haqimizda</h1>
+          <p class="header___txt" data-aos="fade-up">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Blanditiis labore ullam delectus veniam placeat.
+          </p>
+          <button type="button" class="header__btn hvr-shutter-in-horizontal">
+            <a href="{% url 'contact' %}">Batafsil</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <main class="main">
+    <!-- about start-->
+    <section class="about">
+      <div class="container">
+        <div class="title--box">
+          <h3 class="title">Murabbiylar</h3>
+          <p class="txt">
+            There are many variations of passages of Lorem Ipsum available,
+            but the majority have suffered alteration in some form, by
+            injected.
+          </p>
+        </div>
+        <div class="row">
+          <div class="about__box col-lg-8 col-md-4">
+            <img class="about__img" src="{% static 'img/about1.png' %}" alt="" />
+          </div>
+          <div class="about__box col-lg-4 col-md-4">
+            <img class="about__img" src="{% static 'img/about2.png' %}" alt="" />
+          </div>
+        </div>
+        <p class="about__txt">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+          dolores quos ipsam sed sint necessitatibus? Sint modi nam cumque
+          commodi totam voluptas incidunt ipsum qui quam esse quis, veritatis
+          at ipsam eaque vel recusandae itaque assumenda, obcaecati deserunt
+          accusamus libero odio. Minima deleniti nihil ab unde consequatur
+          eaque rem iusto. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Repellendus dolores quos ipsam sed sint necessitatibus? Sint
+          modi nam cumque commodi totam voluptas incidunt ipsum qui quam esse
+          quis, veritatis at ipsam eaque vel recusandae itaque assumenda,
+          obcaecati deserunt accusamus libero odio. Minima deleniti nihil ab
+          unde consequatur eaque rem iusto. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Repellendus dolores quos ipsam sed
+          sint necessitatibus? Sint modi nam cumque commodi totam voluptas
+          incidunt ipsum qui quam esse quis, veritatis at ipsam eaque vel
+          recusandae itaque assumenda, obcaecati deserunt accusamus libero
+          odio. Minima deleniti nihil ab unde consequatur eaque rem iusto.
+        </p>
+        <div class="row">
+          <div class="about__box col-lg-4 col-md-4">
+            <img class="about__img" src="{% static 'img/about3.png' %}" alt="" />
+          </div>
+          <div class="about__box col-lg-8 col-md-4">
+            <img class="about__img" src="{% static 'img/about4.png' %}" alt="" />
+          </div>
+        </div>
+        <p class="about__txt">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+          dolores quos ipsam sed sint necessitatibus? Sint modi nam cumque
+          commodi totam voluptas incidunt ipsum qui quam esse quis, veritatis
+          at ipsam eaque vel recusandae itaque assumenda, obcaecati deserunt
+          accusamus libero odio. Minima deleniti nihil ab unde consequatur
+          eaque rem iusto. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Repellendus dolores quos ipsam sed sint necessitatibus? Sint
+          modi nam cumque commodi totam voluptas incidunt ipsum qui quam esse
+          quis, veritatis at ipsam eaque vel recusandae itaque assumenda,
+          obcaecati deserunt accusamus libero odio. Minima deleniti nihil ab
+          unde consequatur eaque rem iusto. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Repellendus dolores quos ipsam sed
+          sint necessitatibus? Sint modi nam cumque commodi totam voluptas
+          incidunt ipsum qui quam esse quis, veritatis at ipsam eaque vel
+          recusandae itaque assumenda, obcaecati deserunt accusamus libero
+          odio. Minima deleniti nihil ab unde consequatur eaque rem iusto.
+        </p>
+      </div>
+    </section>
+    <!-- about end-->
+  </main>
+{% endblock %}
