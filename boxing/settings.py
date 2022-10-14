@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'app.apps.AppConfig',
     'tinymce',
     'captcha',
+    'boxing_app',
+    'store',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

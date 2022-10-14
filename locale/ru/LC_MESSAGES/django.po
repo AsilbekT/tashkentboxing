@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 15:51+0500\n"
+"POT-Creation-Date: 2022-10-14 15:38+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,18 +20,121 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: boxing/settings.py:121
+#: boxing/settings.py:124
 msgid "English"
-msgstr ""
+msgstr "Английский"
 
-#: boxing/settings.py:122
+#: boxing/settings.py:125
 msgid "Russian"
-msgstr ""
+msgstr "Русский"
 
-#: boxing/settings.py:123
+#: boxing/settings.py:126
 msgid "Uzbek"
-msgstr ""
+msgstr "узбекский"
+
+#: templates/base/admin_lte/data.html:8
+msgid "boxing_federation_app"
+msgstr "Федерация бокса"
+
+#: templates/base/admin_lte/data.html:56
+msgid "Dashboard"
+msgstr "Приборная доска"
+
+#: templates/base/admin_lte/data.html:64
+msgid "main_info_page"
+msgstr "Все боксеры"
+
+#: templates/base/admin_lte/data.html:70
+msgid "yangi_bokschi_qoshish"
+msgstr "Добавить нового боксера"
+
+#: templates/base/admin_lte/data.html:99
+msgid "bokschilarni_qidirish"
+msgstr "Поиск боксеров"
+
+#: templates/base/admin_lte/data.html:126
+msgid "regions"
+msgstr "Область"
+
+#: templates/base/admin_lte/data.html:136
+msgid "champion_unvoni"
+msgstr "Уровень чемпиона"
+
+#: templates/base/admin_lte/data.html:138
+msgid "tanlov"
+msgstr "Выбор"
+
+#: templates/base/admin_lte/data.html:159
+msgid "malumotlar"
+msgstr "Информация"
+
+#: templates/base/admin_lte/data.html:166
+#: templates/base/admin_lte/data.html:181
+msgid "fio"
+msgstr "Фио"
+
+#: templates/base/admin_lte/data.html:167
+#: templates/base/admin_lte/data.html:182 templates/base/details/index.html:105
+msgid "nomeri"
+msgstr "Номер телефона"
+
+#: templates/base/details/index.html:62
+msgid "total"
+msgstr "Общий"
+
+#: templates/base/details/index.html:65
+msgid "wins"
+msgstr "Победы"
+
+#: templates/base/details/index.html:68
+msgid "lose"
+msgstr "Количество побед"
+
+#: templates/base/details/index.html:71
+msgid "knockout"
+msgstr "Побед нокаутом"
+
+#: templates/base/details/index.html:74
+msgid "By submission"
+msgstr "По представлению"
+
+#: templates/base/details/index.html:77
+msgid "decision"
+msgstr "Поражений"
+
+#: templates/base/details/index.html:85
+msgid "trenerlar"
+msgstr "Тренеры"
+
+#: templates/base/details/index.html:108
+msgid "address"
+msgstr "Адрес"
+
+#: templates/base/details/index.html:111
+msgid "darajasi"
+msgstr "Уровень"
+
+#: templates/base/details/index.html:114
+msgid "viloyat"
+msgstr "Область, край"
+
+#: templates/base/details/index.html:118
+msgid "passport_nusxasi"
+msgstr "Копия паспорта"
 
 #: templates/contact.html:20
 msgid "Contact"
-msgstr "Контакт"
+msgstr ""
+
+#~ msgid "bokschilar_ni_taxrirlash"
+#~ msgstr "Изменить боксеры"
+
+#, fuzzy
+#~| msgid "Bokschilar_malumoti"
+#~ msgid "bokschilar_royxati"
+#~ msgstr "Информация о боксерах"
+
+#, fuzzy
+#~| msgid "viloyat"
+#~ msgid "viloyatlar"
+#~ msgstr "Область"

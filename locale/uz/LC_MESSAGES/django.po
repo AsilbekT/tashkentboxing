@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-06 15:51+0500\n"
+"POT-Creation-Date: 2022-10-14 15:38+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,18 +18,121 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: boxing/settings.py:121
+#: boxing/settings.py:124
 msgid "English"
-msgstr ""
+msgstr "Ingliz"
 
-#: boxing/settings.py:122
+#: boxing/settings.py:125
 msgid "Russian"
-msgstr ""
+msgstr "Rus"
 
-#: boxing/settings.py:123
+#: boxing/settings.py:126
 msgid "Uzbek"
-msgstr ""
+msgstr "Uzbek"
+
+#: templates/base/admin_lte/data.html:8
+msgid "boxing_federation_app"
+msgstr "Box Federatsiasi"
+
+#: templates/base/admin_lte/data.html:56
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: templates/base/admin_lte/data.html:64
+msgid "main_info_page"
+msgstr "Hamma bokschilar"
+
+#: templates/base/admin_lte/data.html:70
+msgid "yangi_bokschi_qoshish"
+msgstr "Bokschi qo'shish"
+
+#: templates/base/admin_lte/data.html:99
+msgid "bokschilarni_qidirish"
+msgstr "Bokschilarni qidirish"
+
+#: templates/base/admin_lte/data.html:126
+msgid "regions"
+msgstr "Viloyatlar"
+
+#: templates/base/admin_lte/data.html:136
+msgid "champion_unvoni"
+msgstr "Championing Unvoni"
+
+#: templates/base/admin_lte/data.html:138
+msgid "tanlov"
+msgstr "Tanlo'v"
+
+#: templates/base/admin_lte/data.html:159
+msgid "malumotlar"
+msgstr "Ma'lumotlar"
+
+#: templates/base/admin_lte/data.html:166
+#: templates/base/admin_lte/data.html:181
+msgid "fio"
+msgstr "FIO"
+
+#: templates/base/admin_lte/data.html:167
+#: templates/base/admin_lte/data.html:182 templates/base/details/index.html:105
+msgid "nomeri"
+msgstr "Nomeri"
+
+#: templates/base/details/index.html:62
+msgid "total"
+msgstr "Umumiy"
+
+#: templates/base/details/index.html:65
+msgid "wins"
+msgstr "Yutganlari"
+
+#: templates/base/details/index.html:68
+msgid "lose"
+msgstr "Yutqazganlari"
+
+#: templates/base/details/index.html:71
+msgid "knockout"
+msgstr "Nokaut"
+
+#: templates/base/details/index.html:74
+msgid "By submission"
+msgstr "Taqdim etish orqali"
+
+#: templates/base/details/index.html:77
+msgid "decision"
+msgstr "Qaror"
+
+#: templates/base/details/index.html:85
+msgid "trenerlar"
+msgstr "Trenerlar"
+
+#: templates/base/details/index.html:108
+msgid "address"
+msgstr "Manzil"
+
+#: templates/base/details/index.html:111
+msgid "darajasi"
+msgstr "Darajasi"
+
+#: templates/base/details/index.html:114
+msgid "viloyat"
+msgstr "Viloyat"
+
+#: templates/base/details/index.html:118
+msgid "passport_nusxasi"
+msgstr "Passport nusxasi"
 
 #: templates/contact.html:20
 msgid "Contact"
-msgstr "Aloqa"
+msgstr ""
+
+#~ msgid "bokschilar_ni_taxrirlash"
+#~ msgstr "Bokschilarni taxrirlash"
+
+#, fuzzy
+#~| msgid "Bokschilar_malumoti"
+#~ msgid "bokschilar_royxati"
+#~ msgstr "Bo'kschilar ro'yxati"
+
+#, fuzzy
+#~| msgid "viloyat"
+#~ msgid "viloyatlar"
+#~ msgstr "Viloyat"

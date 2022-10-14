@@ -26,6 +26,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns (
     path('', include('app.urls')),
+    path('base/', include('boxing_app.urls')),
     prefix_default_language=False
 )
 
